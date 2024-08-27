@@ -1,7 +1,9 @@
 const express = require("express");
 const { Http2ServerRequest } = require("http2");
 const { request } = require("https");
-const port = 5000;
+require('dotenv').config();
+
+const port = process.env.PORT ;
 const path = require("path");
 
 const db = require("./config/mongoose");
